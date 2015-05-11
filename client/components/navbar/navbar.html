@@ -1,0 +1,21 @@
+<div class="navbar navbar-default navbar-static-top" ng-controller="NavbarCtrl as NavbarCtrl">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle" type="button" ng-click="isCollapsed = !isCollapsed">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="/" class="navbar-brand">Victory Vinyl</a>
+    </div>
+    <div collapse="isCollapsed" class="navbar-collapse collapse" id="navbar-main">
+      <ul class="nav navbar-nav">
+        <li ng-repeat="navbarLink in NavbarCtrl.navbarLinks" ng-class="{active: isActive(navbarLink.link)}">
+            <a ng-href="{{navbarLink.link}}">{{navbarLink.title}}</a>
+        </li>
+      </ul>
+    </div>
+    <ngcart-summary></ngcart-summary>
+  </div>
+</div>
