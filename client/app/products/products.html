@@ -1,7 +1,16 @@
 <div ng-include="'components/navbar/navbar.html'"></div>
 
-<div class="col-md-12">
-This is the products view.
+<div class="main-column">
+
+	<div class="product-listings">
+		<div class="product" ng-repeat="product in PCtrl.products">
+			<p>{{product.name}}</p>
+			<p>{{product.price}}</p>
+			<p>{{product.id}}</p>
+			<ngcart-addtocart id="{{ product.id }}" name="{{ product.name }}" price="{{ product.price }}" quantity="1" quantity-max="30"></ngcart-addtocart>
+		</div>
+	</div>
+
 </div>
 
 <div ng-include="'components/footer/footer.html'"></div>

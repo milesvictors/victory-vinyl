@@ -1,0 +1,13 @@
+<div ng-include="'components/navbar/navbar.html'"></div>
+
+<div class="main-column">
+
+	<ngcart-cart></ngcart-cart>
+
+	<!-- <ngcart-checkout service="log"></ngcart-checkout> -->
+
+	<ngcart-checkout service="paypal" settings="{ 'business': 'victors.monica@gmail.com', 'item_number': '1001', 'currency_code': 'USD' }"></ngcart-checkout>
+
+</div>
+
+<div ng-include="'components/footer/footer.html'"></div>

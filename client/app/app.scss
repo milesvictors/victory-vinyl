@@ -18,6 +18,7 @@ $fa-font-path: "/bower_components/font-awesome/fonts";
 // Component styles are injected through grunt
 // injector
 @import 'about/about.scss';
+@import 'cart/cart.scss';
 @import 'main/main.scss';
 @import 'products/products.scss';
 @import 'modal/modal.scss';
@@ -36,15 +37,32 @@ body {
 }
 
 .navbar {
-	min-height: 75px;
 
-	.container {
-		
+	.cart-summary-bar {
+		position: fixed;
+		right: 10px;
+		top: -6px;
+		z-index: 1001;
+		height: 90px;
+		width: 110px;
+		border: 2px solid black;
+		box-shadow: 4px 4px 8px black;
+		border-radius: 6px;
+		background-color: white;
+	
+		ngcart-summary {
+			position: relative;
+			text-align: center;
+			top: 5px;
+		}
 	}
+}
 
-	ngcart-summary {
-		position: absolute;
-		right: 20px;
-		top: 10px;
-	}
+footer {
+	margin: 0;
+	padding: 20px 0 15px 0 !important;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	background-color: #f8f8f8;
 }
