@@ -10,6 +10,7 @@ var connection = require('./connection');
 module.exports = function(app) {
 
   // Insert routes below
+  app.use('/api/products', require('./api/product'));
   app.use('/api/things', require('./api/thing'));
   
   // All undefined asset or api routes should return a 404

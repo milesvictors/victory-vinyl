@@ -1,0 +1,20 @@
+<div ng-include="'components/navbar/navbar.html'"></div>
+
+<div class="main-column">
+
+	<div class="product-manager">
+		<form novalidate class="add-product-form">
+
+		Product Name: <input type="text" ng-model="AdminCtrl.newProduct.name" />
+		<br />
+		Product Price: <input type="number" ng-model="AdminCtrl.product.price" />
+		<br />
+		<input type="button" ng-click="AdminCtrl.resetAddProduct()" value="Reset" />
+    	<input type="submit" ng-click="AdminCtrl.createProduct()" value="Create" />
+
+		</form>
+	</div>
+
+</div>
+
+<div ng-include="'components/footer/footer.html'"></div>
